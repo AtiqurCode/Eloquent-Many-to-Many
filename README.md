@@ -57,8 +57,8 @@ Category Model are relation with belongsTo
         return $this->belongsToMany(Product::class);
     }
 
-    // You can save return $this->belongsToMany(Product::class, 'category_id');
-    // $this->belongsToMany(Product::class, 'category_id');
+    // You can save return $this->belongsToMany(Product::class, 'category_product');
+    // $this->belongsToMany(Product::class, 'category_product');
     // relation pivot table name if you didn't follow the naming convention 
 ```
 
