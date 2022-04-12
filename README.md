@@ -38,7 +38,7 @@ So I have just created Two model
 - **Product**
 - **Category**
 
-And three migration file products, categories & category_product
+And three migration file **products, categories & category_product**
 
 Product Model are relation with hasOne
 

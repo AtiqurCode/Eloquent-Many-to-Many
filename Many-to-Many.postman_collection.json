@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "ddacafab-c8bb-4a47-b7b7-cd7ce7ca7b4e",
+		"name": "Many-to-Many",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Category-all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://many-to-many.test/api/categories",
+							"protocol": "http",
+							"host": [
+								"many-to-many",
+								"test"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category-by-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://many-to-many.test/api/categories/1",
+							"protocol": "http",
+							"host": [
+								"many-to-many",
+								"test"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category-Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"program\",\r\n    \"slug\":\"all time chill\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://many-to-many.test/api/categories",
+							"protocol": "http",
+							"host": [
+								"many-to-many",
+								"test"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category-Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fire\",\r\n    \"slug\":\"all time chill\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://many-to-many.test/api/categories/11",
+							"protocol": "http",
+							"host": [
+								"many-to-many",
+								"test"
+							],
+							"path": [
+								"api",
+								"categories",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category-Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fire\",\r\n    \"slug\":\"all time chill\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://many-to-many.test/api/categories/11",
+							"protocol": "http",
+							"host": [
+								"many-to-many",
+								"test"
+							],
+							"path": [
+								"api",
+								"categories",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product-all-with-category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Main-Fan\",\r\n    \"description\":\"Ex exercitationem asperiores consequatur. Est sit eligendi dolores. Saepe aliquid nihil nisi ullam voluptatem molestias et\",\r\n    \"price\":\"3500\",\r\n    \"quantity\":\"5\",\r\n    \"category_id\": [5,6]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://many-to-many.test/api/products/22",
+					"protocol": "http",
+					"host": [
+						"many-to-many",
+						"test"
+					],
+					"path": [
+						"api",
+						"products",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product-by-id-with-category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://many-to-many.test/api/products/7",
+					"protocol": "http",
+					"host": [
+						"many-to-many",
+						"test"
+					],
+					"path": [
+						"api",
+						"products",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"New-Fan\",\r\n    \"description\":\"Ex exercitationem asperiores consequatur. Est sit eligendi dolores. Saepe aliquid nihil nisi ullam voluptatem molestias et\",\r\n    \"price\":\"3500\",\r\n    \"quantity\":\"5\",\r\n    \"category_id\": [1, 2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://many-to-many.test/api/products",
+					"protocol": "http",
+					"host": [
+						"many-to-many",
+						"test"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product-category-update-by-id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Main-Fan\",\r\n    \"description\":\"Ex exercitationem asperiores consequatur. Est sit eligendi dolores. Saepe aliquid nihil nisi ullam voluptatem molestias et\",\r\n    \"price\":\"3500\",\r\n    \"quantity\":\"5\",\r\n    \"category_id\": [5,6]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://many-to-many.test/api/products/15",
+					"protocol": "http",
+					"host": [
+						"many-to-many",
+						"test"
+					],
+					"path": [
+						"api",
+						"products",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product-delete-by-id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Main-Fan\",\r\n    \"description\":\"Ex exercitationem asperiores consequatur. Est sit eligendi dolores. Saepe aliquid nihil nisi ullam voluptatem molestias et\",\r\n    \"price\":\"3500\",\r\n    \"quantity\":\"5\",\r\n    \"category_id\": [5,6]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://many-to-many.test/api/products/15",
+					"protocol": "http",
+					"host": [
+						"many-to-many",
+						"test"
+					],
+					"path": [
+						"api",
+						"products",
+						"15"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
